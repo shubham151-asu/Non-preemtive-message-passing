@@ -11,15 +11,16 @@ Message Passing System
 This code is an example of a message-passing system implemented with the use of user-threads.
 This message-passing system has the following implementation.
 
-    - use of user-defined ports which is kernel global
-    - Direct communication between clients and server: clients use server local port_id (0) and server identifies clients from its port_id from the packets send
-    - asynchronous message passing of type Non-blocking send and Blocking receive\n
-        - the sender sends and forgets
-        - receive blocks if no information is received
+    1. use of user-defined ports which is kernel global
+    2. Direct communication between clients and server: clients use server local port_id (0) and server identifies clients from its port_id from the packets send
+    3. asynchronous message passing of type Non-blocking send and Blocking receive\n
+        a. the sender sends and forgets
+        b. receive blocks if no information is received
     
 File sharing service
 ------------------
 A stateless server and client codes have been written that use a message passing interface to transfer text files. The code flow is explained below
+
     1. client requests for sending a file 
     2. client sends the filename 
     3. server verifies the filename size if exceeds 15 characters server responds with an error
@@ -45,7 +46,7 @@ Run
 -------------------
 ./executableName filename1.txt filename2.txt filename3.txt ....
 
-eg: ./exe file_test.c message.h queue.h sem.h tcb.h thread.h
+eg: ./executableName file_test.c message.h queue.h sem.h tcb.h thread.h
 
 output 5 files with name file_test.c.server message.h.server queue.h.server sem.h.server tcb.h.server thread.h.server
 will be created
