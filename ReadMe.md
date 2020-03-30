@@ -10,7 +10,7 @@ Message Passing System
 ------------------
 This code is an example of a message-passing system implemented with the use of user-threads.
 This message-passing system has the following implementation.
-MARKUP
+
     - use of user-defined ports which is kernel global
     - Direct communication between clients and server: clients use server local port_id (0) and server identifies clients from its port_id from the packets send
     - asynchronous message passing of type Non-blocking send and Blocking receive\n
