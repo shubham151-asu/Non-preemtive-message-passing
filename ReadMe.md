@@ -39,11 +39,11 @@ gcc
 
 Build
 -------------------
-gcc file_test.c -o <executableName>
+gcc file_test.c -o executableName
 
 Run
 -------------------
-./<executableName> filename1.txt filename2.txt filename3.txt ....
+./executableName filename1.txt filename2.txt filename3.txt ....
 
 eg: ./exe file_test.c message.h queue.h sem.h tcb.h thread.h
 
