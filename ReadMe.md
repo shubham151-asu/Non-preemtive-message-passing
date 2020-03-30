@@ -20,16 +20,16 @@ This message-passing system has the following implementation.
 File sharing service
 ------------------
 A stateless server and client codes have been written that use a message passing interface to transfer text files. The code flow is explained below
-    1) client requests for sending a file 
-    2) client sends the filename 
-    3) server verifies the filename size if exceeds 15 characters server responds with an error
-    4) if filename is under 15 characters server responds with a go signal to send file data and renames at its side a 
+    1. client requests for sending a file 
+    2. client sends the filename 
+    3. server verifies the filename size if exceeds 15 characters server responds with an error
+    4. if filename is under 15 characters server responds with a go signal to send file data and renames at its side a 
        filename1.txt.server
-    5) clients send file data
-    6) server verifies if the file size has not exceeded 1MB in that case, an error is returned
-    7) Server checks at a time only 3 clients are being served, a request for another client is denied by the server
+    5. clients send file data
+    6. server verifies if the file size has not exceeded 1MB in that case, an error is returned
+    7. Server checks at a time only 3 clients are being served, a request for another client is denied by the server
        with a message printed as "DO NOT DO THAT" 
-    8) If the file is uploaded, any client which was blocked by the server before gets the chance to upload its data
+    8. If the file is uploaded, any client which was blocked by the server before gets the chance to upload its data
 
 Note : The server is partially stateless as it maintains a record of client files in a lookup table
 
