@@ -1,6 +1,6 @@
 Description
 ------------------
-Non - preemptive message passing Interface is a minuscule implementation of complex software applications in which thread creation, execution, schedulling, signal and wait on shared resources is all controlled by user thread library and not the kernel. As there are no kernel intervention user-level threads context switches faster than kernel-threads (eg: Posix) making it faster for an application that has a large number of threads that need frequent concurrent execution. However, the limitation of this code is the schedular designed can only manage a single core and not multiple cores which kernel can perform making this approach as Non-preemptive. 
+Non - preemptive message passing Interface is a minuscule implementation of complex software applications that involves user-space threads for managing thread tasks such as thread creation, execution, synchronizations, and wait on shared resources. The user-space threads are co-routines that execute sequentially in a non-preemptive manner, hence do not require exclusive locking in certain cases. The overhead for context switching of the user-level threads is much faster compared to kernel threads. If coupled with kernel-threads, they can operate on multiple different processors in a non-preemtive manner. This could be particularly useful for tasks that involve producer-consumer logic.
 
 Non-preemtive scheduling
 ------------------
